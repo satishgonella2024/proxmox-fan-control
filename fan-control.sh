@@ -28,9 +28,9 @@ if [[ "$Override" -eq 1 ]]; then
 elif [ "${CPU_TEMP%.*}" -gt 50 ]; then
     PWM_CASE=150  # High temp: faster fans
 elif [ "${CPU_TEMP%.*}" -gt 40 ]; then
-    PWM_CASE=100  # Medium temp: moderate speed
+    PWM_CASE=85  # Medium temp: moderate speed
 else
-    PWM_CASE=85   # Low temp: quiet operation
+    PWM_CASE=55   # Low temp: quiet operation
 fi
 
 # Apply fan speeds
